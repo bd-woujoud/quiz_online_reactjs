@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllOffre, selectOffres } from '../features/offre/offreSlice'
 import { selectCategories} from '../features/categorie/categorieSlice'
-import OffreItem from './OffreItem'
+import OffreItem from '../components/OffreItem'
 import {  selectRegisterStatus } from '../features/condidature/condidatureSlice'
 
 function Offre() {

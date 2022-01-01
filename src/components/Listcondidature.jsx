@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { getAllCondidature,selectCondidatures } from '../features/condidature/condidatureSlice'
 import Itemlistcond from './Itemlistcond'
-import SideBar from './SideBar'
-import TopBar from './TopBar'
+import SideBar from '../layouts/SideBar'
+import TopBar from '../layouts/TopBar'
 
 function Listcondidature() {
 

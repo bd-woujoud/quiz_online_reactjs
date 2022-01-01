@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux'
 import { deleteQcm, getQcm, getqcm, SelectCreateStatus, SelectDeleteStatus, SelectListQcm, SelectUpdateStatus } from '../features/qcm/qcmSlice'
 import AddQcm from './AddQcm'
 import ItemQcm from './ItemQcm'
-import TopBar from './TopBar'
-import SideBar from './SideBar'
+import TopBar from '../layouts/TopBar'
+import SideBar from '../layouts/SideBar'
 
 const Listqcm = () => {
 

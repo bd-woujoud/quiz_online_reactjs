@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashboared from './Dashboared'
+import Dashboared from '../views/Dashboared'
 import TopBar from './TopBar'
 
 function Contente() {
@@ -11,7 +11,6 @@ function Contente() {
 
                         <TopBar />
                         <Dashboared />
-
 
              </div>
         </div>

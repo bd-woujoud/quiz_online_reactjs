@@ -58,17 +58,16 @@ export const testSlice = createSlice({
       .addCase(getTest.pending, (state) => {
 
       })
+      
       .addCase(getTest.fulfilled, (state, action) => {
       
         state.test = action.payload.data
-
 
       })
       .addCase(getTest.rejected, (state, action) => {
 
       })
 
-      
       //update test
 
       .addCase(updateTest.pending, (state) => {
@@ -84,6 +83,7 @@ export const testSlice = createSlice({
           state.updateTestt = 'failure'
         }
       })
+      
       .addCase(updateTest.rejected, (state, action) => {
 
       });

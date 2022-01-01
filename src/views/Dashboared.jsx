@@ -1,23 +1,21 @@
 
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { createCategorie, deleteCategorie, deleteCategory, getAllCategorie, selectCategories, selectDeleteCat, selectUpdateCat, updateCategorie } from '../features/categorie/categorieSlice'
+import { createCategorie, deleteCategory,selectCategories, updateCategorie } from '../features/categorie/categorieSlice'
 import { AiOutlineDelete } from 'react-icons/ai'
 import { MdOutlineCreate } from 'react-icons/md'
 import 'antd/dist/antd.css'
 import { Modal } from 'antd';
-import GetOffreAdmin from './GetOffreAdmin'
+import GetOffreAdmin from '../components/GetOffreAdmin'
 
 
-function OffreAdmin(offre) {
-
+function Dashboared(offre) {
 
     const [cat, setcat] = useState({})
     const [nomCat, setnomCat] = useState('')
     const [isModalVisible, setIsModalVisible] = useState(false);
     const categories = useSelector(selectCategories)
     const dispatch = useDispatch()
-
     const showModal = () => {
         setIsModalVisible(true);
     };
@@ -43,16 +41,18 @@ function OffreAdmin(offre) {
         }
     }
       
+    
     const handleChange = e => {
         const { name, value } = e.target;
         //setnomCat(e.target.value)
         setcat(prev => ({
+
             ...prev,
             ['nomCat']: value // ihz donnéé mel input ihotha festate
+
         }))
     };
 
-    
     const update_Categorie = (category) => {
         let data = {
             nomCat: cat.nomCat,
@@ -62,7 +62,6 @@ function OffreAdmin(offre) {
         handleCancel()
 
     }
-
 
     return (
 
@@ -93,8 +92,8 @@ function OffreAdmin(offre) {
                                             <tbody>
                                                 {
                                                     categories.map((c, i) => {
-
                                                         return (
+
                                                             <tr key={c._id} >
 
                                                                 <td class="msg_list"> {c.nomCat} </td>
@@ -103,7 +102,6 @@ function OffreAdmin(offre) {
 
                                                             </tr>
                                                         )
-
                                                     })
                                                 }
                                             </tbody>
@@ -131,4 +129,5 @@ function OffreAdmin(offre) {
     )
 }
 
-export default OffreAdmin
+
+export default Dashboared 

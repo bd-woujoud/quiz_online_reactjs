@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Listcondidature from './components/Listcondidature';
 import Login from "./components/Login";
-import Offre from './components/Offre';
+import Offre from './views/Offre';
 import OffreAdmin from './components/OffreAdmin';
 import Test from './components/Test';
 import { getAllCategorie,selectCategories, selectCreateCat,selectDeleteCat} from './features/categorie/categorieSlice';
@@ -46,7 +46,7 @@ function App() {
 
       <Switch>
         <PublicRoute restricted={true} path="/login" component={Login} />
-        <PrivateRoute path="/dash" roles={['admin']} component={Landing} ></PrivateRoute>
+        <PrivateRoute path="/dash" roles={['admin']} component={Landing} />
         <PrivateRoute path="/condidature" roles={['admin']} component={Listcondidature} />
         <PrivateRoute path="/OffreAdmin" roles={['admin']} component={GetOffreAdmin} />
         <PublicRoute restricted={false} path="/test/:id" roles={['admin']} component={Test} />
