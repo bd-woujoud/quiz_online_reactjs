@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { testService } from '../../features/testt/testApi'
 
 const initialState = {
-tests:[],
+
   test:null,
   updateTestt:''
 
@@ -60,7 +60,7 @@ export const testSlice = createSlice({
       })
       .addCase(getTest.fulfilled, (state, action) => {
       
-        state.tests.push(action.payload.data);
+        state.test = action.payload.data
 
 
       })
